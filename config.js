@@ -4,6 +4,6 @@ dotenv.config()
 
 export const {
   PORT,
-  SALT_ROUNDS,
+  SALT_ROUNDS = 10,
   SECRET_JWT_KEY
 } = process.env

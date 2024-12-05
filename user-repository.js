@@ -24,6 +24,7 @@ export class UserRepository {
     if (user) throw new ValidationError('username already exists')
 
     const id = crypto.randomUUID()
+    console.log(SALT_ROUNDS)
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS)
 
     User.create({
